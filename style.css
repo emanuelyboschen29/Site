@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(100, 80, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgb(165, 215, 198);
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: center;
+    
+    }
+    .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 40px;
+    }

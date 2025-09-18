@@ -1,0 +1,163 @@
+body{
+    background-color: #F3E3DE;
+
+}
+
+.bloco{
+    background-color: #e0a897;
+    width: 97%;
+    height: 160px;
+    border-radius: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+    
+}
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.pesquisa {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 500px;
+}
+
+.pesquisa input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.pesquisa button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+.icones {
+    display: flex;
+    gap: 20px;
+    padding-right: 2%;
+}
+
+.bloco a {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.bloco a:hover {
+  color: #c5a13d;
+}
+
+.bloco2 {
+  background-color: #ebbcae;
+  width: 98%;
+  height: 60px;
+  margin-left: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   gap: 40px;
+}
+.botão {
+  box-shadow: 0 4px 4px gray;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-top: 10px;
+  border-radius: 15px;
+  width: 50%;
+  font-size: 20px;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s; 
+  transform: scale(1.05);
+}
+.botão:hover {
+color: #957a3f;
+}
+#carrinho{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  
+}
+
+#carrinho img {
+  width: 40px;
+  height: 40px;
+}
+#zap{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  
+}
+
+#zap img {
+  width: 40px;
+  height: 40px;
+}
+#perfil{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  
+}
+
+#perfil img {
+  width: 40px;
+  height: 40px;
+}
+
+#botao2{
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 0 4px 4px gray;
+  margin-right: 5px;
+ 
+
+}
+.titulo_gargantilha{
+background-color: #d29e84;
+width: 100%;
+height: 60px;
+text-align: center;
+margin-top: 80px;
+
+}
+.bloco3 {
+  display: flex;
+  gap: 40px;
+  margin-top: 35px;
+}
+.card{
+  background-color: #b6ad96;
+  width: 200px;
+  height: 250px;
+  margin: 20px;
+  
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+}

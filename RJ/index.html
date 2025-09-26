@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafa joias</title>
+
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Libertinus+Serif+Display?preview.text=Anel%20safira%20azul%20ouro">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf9f8;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #E0A896;
+            padding: 30px 20px;
+            border-radius: 40px;
+        }
+
+        .logo img {
+            height: 120px;
+        }
+
+        .search-box {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        .search-box input {
+            width: 550px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .search-box button {
+            background: white;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .search-box button img {
+            width: 30px;
+            height: 20px;
+
+        }
+
+        .icons {
+            display: flex;
+            gap: 10px;
+        }
+       
+        .icons img {
+            width: 22px;
+            height: 22px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .produto {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+            margin: 20px;
+            gap: 30px;
+        }
+
+        .imagem-produto {
+            position: relative;
+        }
+
+        .imagem-produto img {
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .Botoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-left: 100px;
+            height: 300px;
+            gap: 15px;
+        }
+
+        .Botoes button {
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .add-carrinho {
+            padding: 20px 150px;
+            background-color: #E0A896;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        .compra-favorito{
+            display: flex;
+            gap: 250px;
+            align-items: center;
+        }
+        .comprar {
+            padding: 10px 50px;
+            width: auto;
+            background-color: #E6BAAD;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+         .favoritos-lateral {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .favoritos-lateral img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+
+
+        @media (max-width: 600px) {
+            .produto {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            .Botoes {
+                margin-left: 0;
+                margin-top: 15px;
+                height: auto;
+                align-items: center;
+            }
+            .texto-produto{
+                font-size: 90px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #333;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .Botoes button {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="Imagens/logo.jpg" alt="Logo Rafa Joias">
+        </div>
+        <!-- Barra de Busca -->
+        <div class="search-box">
+            <input type="text" placeholder="Buscar...">
+            <button>
+                <img src="Imagens/lupa.jpg" alt="Buscar">
+            </button>
+        </div>
+        <!-- icons -->
+        <div class="icons">
+            <a href="https://wa.me/message/446ZFYUROHPWC1" target="_blank">
+                <img src="imagens/WhatsApp.jpg" alt="WhatsApp">
+            </a>
+            <a href="#" target="_blank">
+                <img src="Imagens/Perfil.jpeg" alt="Perfil">
+            </a>
+            <a href="#">
+                <img src="Imagens/favoritos.jpg" alt="favoritos">
+            </a>
+            <a href="#">
+                <img src="Imagens/Carrinho.jpg" alt="Carrinho">
+            </a>
+            
+        </div>
+    </header>
+    <section class="produto">
+        <div class="imagem-produto">
+            <img src="Imagens/produto.jpg" alt="produto">
+        </div>
+       <!-- Botoes -->
+        <div class="Botoes">
+            <p class="texto-produto">Anel safira azul ouro</p>
+            <p class="texto-produto">R$150,00</p>
+            <button class="add-carrinho">Adicionar ao Carrinho</button>
+            <div class="compra-favorito">
+            <button class="comprar">Comprar</button>
+            <button class="favoritos-lateral">
+                <img src="Imagens/favoritos.jpg" alt="Favoritos">
+            </button>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

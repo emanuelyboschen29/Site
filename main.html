@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style2.css">
+    <title>Rafa Joias Folheadas</title>
+</head>
+
+<body>
+    <header>
+        <div class="bloco">
+            <a href="http://127.0.0.1:5500/Index/main.html#"><img src="/img/logo.jfif" alt="Logo da empresa"></a>
+            <form class="pesquisa">
+                <input type="search" placeholder="Buscar...">
+                <button type="submit"></button>
+            </form>
+            <nav class="icones">
+                
+
+                    <button class="botao2"><a href="#" id="zap"><img src="/img/zap.png" alt=""></a></button>
+                    <button class="botao2"><a href="#" id="perfil"><img src="/img/perfil.png" alt=""></a></button>
+                    <button class="botao2"><a href="#" id="carrinho"><img src="/img/carrinho.png" alt="carrinho"></a></button>
+                    <button class="botao2"><a href="#" id="favoritos"><img src="/img/Favoritos.png" alt="favoritos"></a></button>
+            </nav>
+        </div>
+        <div class="bloco2">
+            <button class="botão">Anéis</button>
+            <button class="botão">Brincos</button>
+            <button class="botão">Pulseiras</button>
+            <button class="botão">Gargantilhas</button>
+            <button class="botão">Conjuntos</button>
+            <button class="botão">Escapularios</button>
+
+        </div>
+    </header>
+    <section class="titulo_gargantilha">
+       <h1>Gargantilha</h1> 
+    </section>
+    
+    <section class="blocoGargantilha">
+        <article class="imagem">
+
+            <div class="carrossel">
+                <button class="prev">&#10094;</button>
+                <div class="carrossel-transicao">
+                        <div class="card">
+                            <img src="/img/gargantilhaRosé.jpeg" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="/img/cordaoBaiano.jpeg" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="/img/gargantilhaPrata.jpeg" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="/img/colarCoracao.jpeg" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="/img/colarEstrela.jpeg" alt="">
+                        </div>
+                        <div class="card">
+                            <img src="/img/Malha.jpeg" alt="">
+                        </div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                    </div>
+                <button class="next">&#10095;</button>
+            </div>
+        </article>
+    </section>
+
+    <section class="titulo_anel">
+       <h1>Anel</h1> 
+    </section>
+    <section class="blocoAneis">
+        <div class="imagem">
+        <div class="carrossel">
+            <button class="prev">&#10094;</button>
+            <div class="carrossel-transicao">
+                <div class="card"><img src="" alt=""></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+    </section>
+    
+  
+</body>
+
+</html>
+
+<script>
+    document.querySelectorAll('.carrossel').forEach(carrossel => {
+  const track = carrossel.querySelector('.carrossel-transicao');
+  const cards = carrossel.querySelectorAll('.card');
+  const prevBtn = carrossel.querySelector('.prev');
+  const nextBtn = carrossel.querySelector('.next');
+
+  let index = 0;
+  const cardWidth = cards[0].offsetWidth + 40; // ajuste se a margem for outra
+
+  nextBtn.addEventListener('click', () => {
+    index++;
+    if (index >= cards.length) index = 0;
+    track.style.transform = `translateX(${-index * cardWidth}px)`;
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index--;
+    if (index < 0) index = cards.length - 1;
+    track.style.transform = `translateX(${-index * cardWidth}px)`;
+  });
+});
+
+</script>
+

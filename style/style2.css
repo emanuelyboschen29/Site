@@ -1,225 +1,211 @@
-body{
-    background-color: #f6f1ef;
-   
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap');
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-.bloco{
-    background-color: #e0a897;
-    width: 97%;
-    height: 160px;
-    border-radius: 20px;
-    padding-left: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+    body {
+      background-color: #f6f1ef;
+      color: #333;
+    }
+
     
-    
-}
-img {
-    height: 150px;
-    width: 150px;
-}
+    .bloco {
+      background-color: #e0a897;
+      width: 97%;
+      height: 160px;
+      border-radius: 20px;
+      padding: 0 20px;
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.pesquisa {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 20px;
-  padding: 5px 10px;
-  width: 500px;
-}
+    .logo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-.pesquisa input {
-  border: none;
-  outline: none;
-  padding: 5px;
-  font-size: 16px;
-  flex: 1;
-}
+    .pesquisa {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 20px;
+      padding: 5px 10px;
+      width: 400px;
+    }
 
-.pesquisa button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 18px;
-  color: #333;
-}
+    .pesquisa input {
+      border: none;
+      outline: none;
+      padding: 5px;
+      font-size: 16px;
+      flex: 1;
+    }
+
+    .pesquisa button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+    }
 .icones {
-    display: flex;
-    gap: 20px;
-    padding-right: 2%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
-.bloco a {
-  font-size: 24px;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.3s;
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;      /* largura do botão */
+  height: 60px;     /* altura do botão */
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.10);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
   text-decoration: none;
 }
 
-.bloco a:hover {
-  color: #c5a13d;
+.icon-btn img {
+  width: 37px;   
+  height: 38px;
+  object-fit: contain;
+  pointer-events: none;
 }
 
-.bloco2 {
-  background-color: #ebbcae;
-  width: 98%;
-  height: 60px;
-  margin-left: 15px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   gap: 40px;
-}
-.botão {
-  box-shadow: 0 4px 4px gray;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-  margin-top: 10px;
-  border-radius: 15px;
-  width: 50%;
-  font-size: 20px;
-  padding: 10px;
-  position: relative;
-  cursor: pointer;
-  transition: 0.3s; 
-  transform: scale(1.05);
-}
-.botão:hover {
-color: #957a3f;
-}
-#carrinho{
-  width: 40px;
-  height: 40px;
-  display: flex;
-  
+.icon-btn:hover {
+  transform: translateY(-3px);
+  background: #f6f1ef;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-#carrinho img {
-  width: 40px;
-  height: 40px;
-}
-#zap{
-  width: 40px;
-  height: 40px;
-  display: flex;
-  
-}
+    .bloco2 {
+      background-color: #ebbcae;
+      width: 98%;
+      height: 60px;
+      margin: 15px auto 0;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
 
-#zap img {
-  width: 40px;
-  height: 40px;
-}
-#perfil{
-  width: 40px;
-  height: 40px;
-  display: flex;
-  
-}
+    .botão {
+      border-radius: 15px;
+      font-size: 16px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: #fff;
+      border: 1px solid #d2a96d;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-#perfil img {
-  width: 40px;
-  height: 40px;
-}
-#favoritos {
-  width: 40px;
-  height: 40px;
-}
-#favoritos img {
-  width: 40px;
-  height: 40px;
-  display: flex;
-}
-.botao2{
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  border: 1px solid black;
-  box-shadow: 0 4px 4px gray;
-  margin-right: 5px;
- 
+    .botão:hover {
+      background: #d29e84;
+      color: #fff;
+    }
 
-}
-.titulo_gargantilha{
-background-color: #d29e84;
-width: 100%;
-height: 40px;
-text-align: center;
-align-items: center;
-justify-content: center;
-margin-top: 80px;
-padding-top: 10px;
-padding-bottom: 25px;
-}
+    section {
+      width: 95%;
+      margin: 40px auto;
+    }
 
-.blocoGargantilha{
-  display: flex;
-  gap: 5px;
-  margin-top: 20px;
-}
-.card{
-  background-color: #D0B6AD;
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-  flex-shrink: 0;
-}
+    h1 {
+      text-align: center;
+      background-color: #d29e84;
+      padding: 15px 0;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
 
-.carrossel {
-  position: relative;
+    .carrossel {
+      position: relative;
+      overflow: hidden;
+    }
 
-}
+    .carrossel-transicao {
+      display: flex;
+      transition: transform 0.5s ease;
+      gap: 20px;
+    }
+    #titulos{
+        font-family: "Roboto Slab", serif;
+    }
 
-.carrossel-transicao {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-}
+    .card {
 
-.prev { left: 10px; }
-.next { right: 10px; }
+      background-color: #D0B6AD;
+      width: 250px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      text-align: center;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
 
-.colar {
-  padding-left: 20px;
-  padding-top: 20px;
-  width: 250px;
-  height: 250px;
-  display: flex;
-}
-.titulo_anel {
-  background-color: #d29e84;
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  padding-top: 10px;
-  padding-bottom: 25px;
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-.blocoAnel {
-  margin-top: 20px;
-  display: flex;
-  gap: 5px;
-}
+    .card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {         font-family: "Quicksand", sans-serif;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .card p {
+         font-family: "Quicksand", sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }

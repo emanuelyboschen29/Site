@@ -2,220 +2,282 @@
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafa joias</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafa Joias</title>
 
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Libertinus+Serif+Display?preview.text=Anel%20safira%20azul%20ouro">
+  <!-- Fonte elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #fdf9f8;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #E0A896;
-            padding: 20px 10px;
-            border-radius: 40px;
-        }
+    /* ===== Fundo borrado ===== */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('/img/fundo_borrado.jpg') no-repeat center center;
+      background-size: cover;
+      filter: blur(10px);
+      z-index: -1; /* fica atrás do conteúdo */
+    }
 
-        .logo img {
-            height: 100px;
-        }
+    /* ===== HEADER ===== */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(224, 168, 150, 0.9);
+      padding: 15px 25px;
+      border-radius: 0 0 25px 25px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        .search-box {
-            display: flex;
-            flex-grow: 1;
-            justify-content: center;
-        }
+    .logo img {
+      height: 80px;
+      border-radius: 15px;
+    }
 
-        .search-box input {
-            width: 550px;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-        }
+    /* Barra de busca */
+    .search-box {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      max-width: 600px;
+    }
 
-        .search-box button {
-            background: white;
-            border: none;
-            padding: 6px 10px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
+    .search-box input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 25px 0 0 25px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
 
-        .search-box button img {
-            width: 25px;
-            height: 20px;
+    .search-box button {
+      background: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 0 25px 25px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-        }
+    .search-box button:hover {
+      background: #E0A896;
+      color: white;
+    }
 
-        .icons {
-            display: flex;
-            gap: 10px;
-        }
+    /* Ícones sociais */
+    .icons {
+      display: flex;
+      gap: 12px;
+    }
 
-        .icons img {
-            width: 22px;
-            height: 22px;
-            background: white;
-            padding: 4px;
-            border-radius: 5px;
-        }
+    .icons img {
+      width: 28px;
+      height: 28px;
+      background: white;
+      padding: 6px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
 
-        .produto {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            position: relative;
-            margin: 20px;
-            gap: 30px;
-        }
+    .icons img:hover {
+      background: #f4e3dd;
+      transform: scale(1.1);
+    }
 
-        .imagem-produto {
-            position: relative;
-        }
+    /* ===== PRODUTO ===== */
+    .produto {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 40px 20px;
+      gap: 50px;
+      flex-wrap: wrap;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-        .imagem-produto img {
-            width: 500px;
-            border-radius: 10px;
-        }
+    .imagem-produto img {
+      width: 380px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
 
-        .Botoes {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            margin-left: 100px;
-            height: 300px;
-            gap: 15px;
-        }
+    .imagem-produto img:hover {
+      transform: scale(1.05);
+    }
 
-        .Botoes button {
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
+    .Botoes {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20px;
+      max-width: 350px;
+    }
 
-        .add-carrinho {
-            padding: 20px 150px;
-            background-color: #E0A896;
-            font-size: 18px;
-            border-radius: 10px;
-        }
-        .compra-favorito{
-            display: flex;
-            gap: 250px;
-            align-items: center;
-        }
-        .comprar {
-            padding: 10px 50px;
-            width: auto;
-            background-color: #E6BAAD;
-            font-size: 16px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-         .favoritos-lateral {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background: white;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            padding: 0;
-        }
+    .texto-produto {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2b2b2b;
+      font-family: 'Playfair Display', serif;
+    }
 
-        .favoritos-lateral img {
-            width: 70%;
-            height: 70%;
-            object-fit: contain;
-        }
+    .texto-preco {
+      font-size: 22px;
+      font-weight: 600;
+      color: #E0A896;
+    }
 
+    /* Botões */
+    .add-carrinho {
+      padding: 15px;
+      background-color: #E0A896;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-        @media (max-width: 600px) {
-            .produto {
-                flex-direction: column;
-                align-items: center;
-            }
+    .add-carrinho:hover {
+      background-color: #d28a73;
+    }
 
+    .compra-favorito {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-            .Botoes {
-                margin-left: 0;
-                margin-top: 15px;
-                height: auto;
-                align-items: center;
-            }
-            .texto-produto{
-                font-size: 90px;
-                font-weight: bold;
-                margin-bottom: 20px;
-                color: #333;
-                font-family: 'Poppins', sans-serif;
-            }
+    .comprar {
+      flex: 1;
+      padding: 12px;
+      background-color: #E6BAAD;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s;
+    }
 
-            .Botoes button {
-                width: 80%;
-            }
-        }
-    </style>
+    .comprar:hover {
+      background-color: #dca698;
+      color: white;
+    }
+
+    .favoritos-lateral {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 15px;
+      transition: 0.3s;
+    }
+
+    .favoritos-lateral:hover {
+      background: #f7e4de;
+      transform: scale(1.1);
+    }
+
+    .favoritos-lateral img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .produto {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .texto-produto {
+        font-size: 22px;
+      }
+
+      .texto-preco {
+        font-size: 18px;
+      }
+
+      .search-box input {
+        max-width: 200px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <!-- Logo -->
-        <div class="logo">
-            <a href="/Index/main.html"><img src="logo.jpg" alt="Logo Rafa Joias"></a>
-            
-        </div>
-        <!-- Barra de Busca -->
-        <div class="search-box">
-            <input type="text" placeholder="Buscar...">
-            <button>
-                <img src="lupa.jpg" alt="Buscar">
-            </button>
-        </div>
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/Index/main.html"><img src="/img/logo.jfif" alt="Logo Rafa Joias"></a>
+    </div>
 
-        <div class="icons">
-            <a href="." target="_blank">
-                <img src="/img/zap.png" alt="WhatsApp">
-            </a>
-            <a href="https://www.instagram.com/rafa.folheados_" target="_blank">
-                <img src="/Instagram.jpg" alt="Instagram">
-            </a>
-            <a href="#">
-                <img src="/img/Favoritos.png" alt="favoritos">
-            </a>
-            <a href="#">
-                <img src="/img/carrinho.png" alt="Carrinho">
-            </a>
-        </div>
-    </header>
-    <section class="produto">
-        <div class="imagem-produto">
-            <img src="/img/ConjuntoAzul.jpeg" alt="produto">
-        </div>
+    <!-- Barra de Busca -->
+    <div class="search-box">
+      <input type="text" placeholder="Buscar...">
+      <button>🔍</button>
+    </div>
 
-        <div class="Botoes">
-            <p class="texto-produto">Anel safira azul ouro</p>
-            <p class="texto-produto">R$150,00</p>
-            <button class="add-carrinho">Adicionar ao Carrinho</button>
-            <div class="compra-favorito">
-            <button class="comprar">Comprar</button>
-            <button class="favoritos-lateral">
-                <img src="favoritos.jpg" alt="Favoritos">
-            </button>
-            </div>
-        </div>
+    <!-- Ícones -->
+    <div class="icons">
+      <a href="." target="_blank">
+        <img src="/img/zap.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.instagram.com/rafa.folheados_" target="_blank">
+        <img src="/img/instagram.png" alt="Instagram">
+      </a>
+      <a href="#">
+        <img src="/img/Favoritos.png" alt="Favoritos">
+      </a>
+      <a href="#">
+        <img src="/img/carrinho.png" alt="Carrinho">
+      </a>
+    </div>
+  </header>
 
-    </section>
+  <!-- Produto -->
+  <section class="produto">
+    <div class="imagem-produto">
+      <img src="/img/ConjuntoAzul.jpeg" alt="Conjunto Safira Azul">
+    </div>
+
+    <div class="Botoes">
+      <h1 class="texto-produto">Anel Safira Azul Ouro</h1>
+      <p class="texto-preco">R$ 150,00</p>
+      <button class="add-carrinho">Adicionar ao Carrinho</button>
+      <div class="compra-favorito">
+        <button class="comprar">Comprar</button>
+        <button class="favoritos-lateral">
+          <img src="/img/Favoritos.png" alt="Favoritos">
+        </button>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

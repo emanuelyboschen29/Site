@@ -7,9 +7,13 @@
     }
 
     body {
-      background-color: #f6f1ef;
-      color: #333;
-    }
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: url('/img/rosas.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
 
     
     .bloco {

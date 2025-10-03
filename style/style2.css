@@ -6,14 +6,15 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    body {
+body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: url('/img/rosas.jpg') no-repeat center center fixed;
+  background-image: url('https://img.freepik.com/fotos-gratis/vista-frontal-de-uma-rosa-rosa-escura-sobre-os-raios-ensolarados-e-aneis-de-casamento-preciosos_8353-11490.jpg?t=st=1759510500~exp=1759514100~hmac=bc30479fc57843a0dcaf7f41892359d0b8be6e1ca25fcaf932faeebc07d864fe&w=1480');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   color: #333;
 }
-
 
     
     .bloco {

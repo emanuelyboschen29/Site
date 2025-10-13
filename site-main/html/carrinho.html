@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Rafa Joias Folheadas</title>
+  <link rel="stylesheet" href="/style/carrinho.css">
+</head>
+<body>
+  <h1>🛍️ Seu Carrinho</h1>
+
+  <div class="carrinho-container">
+    <div id="itens"></div>
+    <div class="total" id="total"></div>
+
+    <div class="botoes">
+      <button id="voltar" class="btn" onclick="window.location.href='main.html'">⬅️ Voltar à Loja</button>
+      <button id="limpar" class="btn">🗑️ Esvaziar Carrinho</button>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('itens');
+    const totalEl = document.getElementById('total');
+    const limparBtn = document.getElementById('limpar');
+
+    function atualizarCarrinho() {
+      const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      container.innerHTML = '';
+      let total = 0;
+
+      if (carrinho.length === 0) {
+        container.innerHTML = '<p style="text-align:center; font-size:1.2rem; color:#888;">Seu carrinho está vazio 😢</p>';
+        totalEl.textContent = '';
+        return;
+      }
+
+      carrinho.forEach((produto, index) => {
+        total += produto.preco;
+        const item = document.createElement('div');
+        item.classList.add('item');
+        item.innerHTML = `
+          <img src="${produto.img}" alt="${produto.nome}">
+          <span>${produto.nome}</span>
+          <span>R$ ${produto.preco.toFixed(2)}</span>
+          <button onclick="removerItem(${index})">Remover</button>
+        `;
+        container.appendChild(item);
+      });
+
+      totalEl.textContent = `💰 Total: R$ ${total.toFixed(2)}`;
+    }
+
+    function removerItem(index) {
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.splice(index, 1);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      atualizarCarrinho();
+    }
+
+    limparBtn.addEventListener('click', () => {
+      localStorage.removeItem('carrinho');
+      atualizarCarrinho();
+    });
+
+    atualizarCarrinho();
+  </script>
+</body>
+</html>

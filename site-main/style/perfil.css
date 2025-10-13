@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Quicksand:wght@400;600&display=swap');
+
+/* ===== BODY E FUNDO ===== */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #4b3b2b;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('https://img.freepik.com/vetores-gratis/padrao-de-cor-pastel-aquarela_23-2149413430.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(5px) brightness(0.9); /* Menos borrado e brilho suave */
+  z-index: -1;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ===== CABEÇALHO ===== */
+header.cabecalho {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(236, 197, 190, 0.65); /* Um pouco mais opaco para visibilidade */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.bloco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 50px;
+}
+
+.logo { height: 65px; border-radius: 50%; transition: transform 0.3s ease; }
+.logo:hover { transform: scale(1.08); }
+
+/* ===== PESQUISA ===== */
+.pesquisa { display: flex; align-items: center; gap: 8px; }
+.pesquisa input {
+  width: 500px;
+  padding: 8px 14px;
+  border-radius: 25px;
+  border: 1px solid #d8c8b8;
+  outline: none;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.pesquisa button { border: none; background: none; cursor: pointer; font-size: 18px; }
+.pesquisa button:hover { transform: scale(1.2); }
+
+/* ===== ICONES ===== */
+.icones { display: flex; align-items: center; gap: 20px; }
+.icon-btn { position: relative; }
+.icon-btn img {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.icon-btn:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,0.25));
+}
+.cart-count {
+  position: absolute;
+  top: -6px; right: -6px;
+  background: linear-gradient(135deg, #e3b16a, #c6974b);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 11px;
+  padding: 3px 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+.bloco_perfil{
+    width: 70%;
+    height: 600px;
+    background-color: rgba(236, 197, 190, 0.65);
+    margin-top: 140px;
+    border-radius: 10px;
+    border: solid rgb(87, 85, 85) 1px;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
+    position: relative; 
+    overflow: hidden;  
+}
+.dados {
+    width: 80%;
+    height: 500px;
+    background-color: rgba(241, 229, 227, 0.65);
+    margin-top: 30px;
+    position: absolute; /* permite mover o bloco dentro */
+    right: 10px; /* empurra o bloco para o lado direito */
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
+}

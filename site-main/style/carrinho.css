@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Quicksand:wght@400;600&display=swap');
+
+/* ===== BASE ===== */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: radial-gradient(circle at top left, #fffff0, #fffcea, #fff5f7); /* tons de rosa clarinho */
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  color: #4b3b2b;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.12) 0%, transparent 70%); /* leve toque rosa */
+  animation: brilhoFundo 6s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes brilhoFundo {
+  from { transform: scale(1); opacity: 0.6; }
+  to { transform: scale(1.1); opacity: 1; }
+}
+
+
+h1 {
+  margin-top: 40px;
+  background: linear-gradient(90deg, #c9a36d, #d8b693, #e6cfa3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.8rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(210, 160, 100, 0.6);
+  animation: brilhoTitulo 2.5s infinite alternate ease-in-out;
+  z-index: 1;
+}
+
+@keyframes brilhoTitulo {
+  from { text-shadow: 0 0 15px rgba(210, 160, 100, 0.6); }
+  to { text-shadow: 0 0 35px rgba(220, 180, 120, 0.9); }
+}
+
+/* ===== CONTAINER DO CARRINHO ===== */
+.carrinho-container {
+  width: 85%;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 25px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+  margin: 40px 0;
+  padding: 40px 50px;
+  animation: fadeIn 1s ease-in-out;
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+/* ===== ITENS ===== */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6d5c4;
+  padding: 15px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 20px rgba(200, 160, 120, 0.15);
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #d1b69366;
+}
+
+.item span {
+  flex: 1;
+  font-size: 1rem;
+  color: #4b3b2b;
+}
+
+/* ===== BOTÃO REMOVER ITEM ===== */
+.item button {
+  background: linear-gradient(135deg, #f0d8b5, #e6cfa3);
+  color: #5b4323;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.18);
+}
+
+.item button:hover {
+  background: linear-gradient(135deg, #f5e4c2, #ead8ac);
+  transform: scale(1.08);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.28);
+}
+
+/* ===== TOTAL ===== */
+.total {
+  text-align: right;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 25px;
+  color: #b09270;
+  text-shadow: 0 0 6px rgba(244, 220, 200, 0.5);
+}
+
+/* ===== BOTÕES DE AÇÃO ===== */
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+#limpar {
+  background: linear-gradient(135deg, #e6cfa3, #f0d8b5);
+  color: #5b4323;
+}
+
+#limpar:hover {
+  background: linear-gradient(135deg, #f5e4c2, #ead8ac);
+  transform: scale(1.06);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+#voltar {
+  background: linear-gradient(135deg, #f0d8b5, #e6cfa3);
+  color: #5b4323;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+}
+
+#voltar:hover {
+  background: linear-gradient(135deg, #f5e4c2, #ead8ac);
+  transform: scale(1.06);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

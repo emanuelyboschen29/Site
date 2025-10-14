@@ -91,7 +91,7 @@ header.cabecalho {
 .bloco_perfil{
     width: 70%;
     height: 600px;
-    background-color: rgba(236, 197, 190, 0.65);
+    background-color: rgba(224, 148, 132, 0.65);
     margin-top: 140px;
     border-radius: 10px;
     border: solid rgb(87, 85, 85) 1px;
@@ -102,9 +102,9 @@ header.cabecalho {
 .dados {
     width: 80%;
     height: 570px;
-    background-color: rgba(241, 229, 227, 0.65);
-    position: absolute; /* permite mover o bloco dentro */
-    right: 10px; /* empurra o bloco para o lado direito */
+    background-color: rgba(247, 241, 240, 0.65);
+    position: absolute; 
+    right: 10px; 
     bottom: 10x;
     top: 15px;
     display: flex;
@@ -118,4 +118,31 @@ header.cabecalho {
     border-radius: 80%;
     margin-left: 15px;
     margin-top: 5px;
+}
+
+.nome {
+  margin: 10px;
+}
+
+.opcoes {
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  flex-direction: column; 
+  gap: 20px; 
+  
+}
+button {
+  padding: 10px;
+  margin-bottom: 8px;
+  margin-top: 8px; 
+  gap: 10px; 
+  border-radius: 15px;
+  border: none;
+  box-shadow: 8px 8px 20px rgb(0, 0, 0, 0.2);
+}
+#dadosPessoais {
+  margin: 10px;
+  border: #4b3b2b;
+  margin-bottom: 10px;
 }

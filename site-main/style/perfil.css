@@ -101,12 +101,21 @@ header.cabecalho {
 }
 .dados {
     width: 80%;
-    height: 500px;
+    height: 570px;
     background-color: rgba(241, 229, 227, 0.65);
-    margin-top: 30px;
     position: absolute; /* permite mover o bloco dentro */
     right: 10px; /* empurra o bloco para o lado direito */
+    bottom: 10x;
+    top: 15px;
     display: flex;
     border-radius: 10px;
     box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
+}
+
+.usuario {
+   height: 65px; border-radius: 50%;
+    display: flex;
+    border-radius: 80%;
+    margin-left: 15px;
+    margin-top: 5px;
 }
